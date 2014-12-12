@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+circle {
+	stroke : red;
+	stroke-width : 6;
+	fill : white;
+}
+
+text {
+	fill: red;
+}

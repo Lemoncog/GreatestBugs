@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="badge-score" attributes="">
+  <template>
+    <link rel="stylesheet" href="badge-score.css">
+    <svg height="{{canvasH}}" width="{{canvasW}}">
+      <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="6" fill="white" />
+      <text x="50" y="50">
+      hello
+      </text>
+    </svg>
+  </template>
+  <script>
+    (function () {
+
+      var radius = 400;
+      var x = radius;
+      var y = radius;
+
+      var canvasW = radius * 2;
+      var canvasH = radius * 2;
+
+      Polymer({
+        // define element prototype here
+          canvasH : canvasH,
+          canvasW : canvasW,
+          circle : {
+          radius : radius,
+          x : x,
+          y : y
+          }
+      });
+
+    })();
+  </script>
+</polymer-element>
