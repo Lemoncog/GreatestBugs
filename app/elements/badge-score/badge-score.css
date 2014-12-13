@@ -2,6 +2,11 @@
   display: block;
 }
 
+svg {
+	display: block;
+	margin: auto;
+}
+
 circle {
 	stroke : red;
 	fill : white;
