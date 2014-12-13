@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-icons/social-icons.html">
+
+<polymer-element name="people-group" attributes="people">
+    <link rel="stylesheet" href="people-group.css">
+  <template>
+    <template repeat="{{ icon in icons }}"> 
+        <core-icon icon="social:people" style="
+          position: absolute;
+          left : {{icon.x}}px;
+          top : {{icon.y}}px;">
+        </core-icon>
+    </template>
+  </template>
+  <script>
+    (function () {
+      Polymer({
+        icons : [{ name : "LOL" }],
+        // define element prototype here
+        peopleChanged : function(oldPeople, newPeople ) {
+            console.log("People changed = " + newPeople);
+
+            peopleIcons = [];
+
+            for (i = 0; i < newPeople.count; i++) {
+
+              x = i * 20;
+              y = 20;
+
+              peopleIcons.push( {
+                                 x : x,
+                                 y : y,
+                               } );
+            }
+
+            this.icons = peopleIcons;
+        }
+      });
+
+    })();
+  </script>
+</polymer-element>

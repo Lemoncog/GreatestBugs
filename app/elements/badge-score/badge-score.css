@@ -11,3 +11,9 @@ text {
 	fill: red;
 	text-anchor: middle;
 }
+
+core-icon[icon="social:people"] {
+	color: red;
+	width: 52px;
+	height: 52px;
+}

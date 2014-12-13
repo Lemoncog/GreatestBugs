@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
+<core-icon icon="social:cake"></core-icon>
 <polymer-element name="badge-score" attributes="">
   <template>
     <link rel="stylesheet" href="badge-score.css">
@@ -9,6 +10,7 @@
       5k
       </text>
     </svg>
+    <people-group people="{{people}}"><people-group>
   </template>
   <script>
     (function () {
@@ -21,13 +23,16 @@
       var canvasW = (strokeWidth + radius) * 2;
       var canvasH = (strokeWidth + radius) * 2;
 
-      var textSize = radius * 0.6;
+      var textSize = radius * 0.7;
       var textX = x;
       var textY = y + (textSize/4);
 
 
       Polymer({
         // define element prototype here
+          people : { 
+                      count : 5 
+                   },
           canvasH : canvasH,
           canvasW : canvasW,
           circle : {
