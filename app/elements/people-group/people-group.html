@@ -4,13 +4,15 @@
 <polymer-element name="people-group" attributes="people">
     <link rel="stylesheet" href="people-group.css">
   <template>
-    <template repeat="{{ icon in icons }}"> 
-        <core-icon icon="social:people" style="
-          color: red;
-          width: {{icon.width}}px;
-          height: {{icon.height}}px;">
-        </core-icon>
-    </template>
+    <div center-justified horizontal layout wrap style="width: 220px">
+      <template repeat="{{ icon in icons }}"> 
+          <core-icon icon="social:people" style="
+            color: red;
+            width: {{icon.width}}px;
+            height: {{icon.height}}px;">
+          </core-icon>
+      </template>
+    </div>
   </template>
   <script>
     (function () {
