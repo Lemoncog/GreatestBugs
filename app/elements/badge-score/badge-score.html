@@ -4,21 +4,27 @@
   <template>
     <link rel="stylesheet" href="badge-score.css">
     <svg height="{{canvasH}}" width="{{canvasW}}">
-      <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="6" fill="white" />
-      <text x="50" y="50">
-      hello
+      <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
+      <text x="{{text.x}}" y="{{text.y}}" font-size="{{text.size}}";>
+      5k
       </text>
     </svg>
   </template>
   <script>
     (function () {
 
-      var radius = 400;
-      var x = radius;
-      var y = radius;
+      var radius = 100;
+      var strokeWidth = radius * 0.1;
+      var x = radius + strokeWidth;
+      var y = radius + strokeWidth;
 
-      var canvasW = radius * 2;
-      var canvasH = radius * 2;
+      var canvasW = (strokeWidth + radius) * 2;
+      var canvasH = (strokeWidth + radius) * 2;
+
+      var textSize = radius * 0.6;
+      var textX = x;
+      var textY = y + (textSize/4);
+
 
       Polymer({
         // define element prototype here
@@ -27,7 +33,13 @@
           circle : {
           radius : radius,
           x : x,
-          y : y
+          y : y,
+          stroke_width : strokeWidth
+          },
+          text : {
+            x : textX,
+            y : textY,
+            size : textSize + "px"
           }
       });
 
