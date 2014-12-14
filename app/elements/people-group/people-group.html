@@ -4,15 +4,13 @@
 <polymer-element name="people-group" attributes="people">
     <link rel="stylesheet" href="people-group.css">
   <template>
-    <div center-justified horizontal layout wrap style="width: 220px">
-      <template repeat="{{ icon in icons }}"> 
+     <template repeat="{{ icon in icons }}"> 
           <core-icon icon="social:people" style="
             color: red;
             width: {{icon.width}}px;
             height: {{icon.height}}px;">
           </core-icon>
       </template>
-    </div>
   </template>
   <script>
     (function () {
@@ -24,7 +22,7 @@
 
             peopleIcons = [];
             rowCount = 3;
-            height = newPeople.circle_height / rowCount;
+            height = 40;
             width = height;
 
             xOffset = 0;
@@ -34,7 +32,7 @@
               if(i > 0 && i % rowCount == 0) {
                 //Next row
                 xOffset = height/2;
-                yOffset = height*0.85;
+                yOffset = height*0.70;
                 xMod = 0;
               }
 

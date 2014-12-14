@@ -4,21 +4,21 @@
 <polymer-element name="badge-score" attributes="">
   <template>
     <link rel="stylesheet" href="badge-score.css">
+    <b>BUG REPORT HERE MIGHT BE REALLY LONG</b>
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
       <text x="{{text.x}}" y="{{text.y}}" font-size="{{text.size}}";>
       5k
       </text>
-    </svg>
-    </br>
-    <div horizontal center-justified layout>
-    <people-group people="{{people}}"><people-group>
+    </svg> 
+    <div>
+    <people-group people="{{people}}"></people-group>
     </div>
   </template>
   <script>
     (function () {
 
-      var radius = 100;
+      var radius = 80;
       var strokeWidth = radius * 0.1;
       var x = radius + strokeWidth;
       var y = radius + strokeWidth;
@@ -30,12 +30,10 @@
       var textX = x;
       var textY = y + (textSize/4);
 
-
       Polymer({
         // define element prototype here
           people : { 
-                      count : 5,
-                      circle_height : canvasH
+                      count : 5
                    },
           canvasH : canvasH,
           canvasW : canvasW,

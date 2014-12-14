@@ -3,8 +3,8 @@
 }
 
 svg {
-	display: block;
-	margin: auto;
+	float : left;
+	height: auto;
 }
 
 circle {
