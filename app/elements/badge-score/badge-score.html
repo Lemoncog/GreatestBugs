@@ -3,8 +3,9 @@
 <core-icon icon="social:cake"></core-icon>
 <polymer-element name="badge-score" attributes="">
   <template>
+  <div>
     <link rel="stylesheet" href="badge-score.css">
-    <b>BUG REPORT HERE MIGHT BE REALLY LONG</b>
+    <b>Cannot unlock DRM store</b>
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
       <text x="{{text.x}}" y="{{text.y}}" font-size="{{text.size}}";>
@@ -12,19 +13,18 @@
       </text>
     </svg> 
     <div>
-    <people-group people="{{people}}"></people-group>
-    </div>
   </template>
   <script>
     (function () {
 
-      var radius = 80;
+      var margin = 20;
+      var radius = 60;
       var strokeWidth = radius * 0.1;
-      var x = radius + strokeWidth;
-      var y = radius + strokeWidth;
+      var x = (radius + strokeWidth) + margin/2;
+      var y = (radius + strokeWidth) + margin/2;
 
-      var canvasW = (strokeWidth + radius) * 2;
-      var canvasH = (strokeWidth + radius) * 2;
+      var canvasW = ((strokeWidth + radius) * 2) + margin;
+      var canvasH = ((strokeWidth + radius) * 2) + margin;
 
       var textSize = radius * 0.7;
       var textX = x;
@@ -33,7 +33,7 @@
       Polymer({
         // define element prototype here
           people : { 
-                      count : 5
+                      count : 20
                    },
           canvasH : canvasH,
           canvasW : canvasW,
