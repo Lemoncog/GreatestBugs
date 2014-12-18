@@ -1,7 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<core-icon icon="social:cake"></core-icon>
-<polymer-element name="badge-score" attributes="">
+<polymer-element name="badge-score" attributes="badge">
   <template>
   <div>
     <link rel="stylesheet" href="badge-score.css">
@@ -9,23 +8,13 @@
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
       <text x="{{text.x}}" y="{{text.y}}" font-size="{{text.size}}";>
-      {{text.text}}
+      {{badge.bugCount}}
       </text>
     </svg> 
     <div>
   </template>
   <script>
     (function () {
-
-
-      function numberToFriendlyText(number) {
-        if(number < 1000) {
-          return number;
-        } else {
-          return (''+ number).substring(0, 1) + "." + (''+ number).substring(1, 2) + "k";
-        }
-      };
-
       var margin = 20;
       var radius = 60;
       var strokeWidth = radius * 0.1;
@@ -38,10 +27,6 @@
       var textSize = radius * 0.7;
       var textX = x;
       var textY = y + (textSize/4);
-
-      var randomNumber = Math.random() * 5000;
-      console.log("RandomNumber = " + randomNumber);
-      var text = numberToFriendlyText(randomNumber);
 
       Polymer({
         // define element prototype here
@@ -57,7 +42,6 @@
           stroke_width : strokeWidth
           },
           text : {
-            text : text,
             x : textX,
             y : textY,
             size : textSize + "px"
