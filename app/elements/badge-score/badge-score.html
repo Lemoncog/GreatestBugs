@@ -4,14 +4,18 @@
   <template>
   <div>
     <link rel="stylesheet" href="badge-score.css">
-    <b>AMAZING BUG REPORT</b>
+    <b style="
+      position : relative;
+      top : {{title.top}};
+      font-size : {{title.size}};
+    ">AMAZING BUG REPORT</b>
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
-      <text x="{{text.x}}" y="{{text.y}}" font-size="{{text.size}}";>
+      <text x="{{count.x}}" y="{{count.y}}" font-size="{{count.size}}";>
       {{badge.bugCount}}
       </text>
-    </svg> 
-    <div>
+    </svg>
+  </div>
   </template>
   <script>
     (function () {
@@ -24,9 +28,12 @@
       var canvasW = ((strokeWidth + radius) * 2) + margin;
       var canvasH = ((strokeWidth + radius) * 2) + margin;
 
-      var textSize = radius * 0.7;
-      var textX = x;
-      var textY = y + (textSize/4);
+      var countSize = radius * 0.7;
+      var countX = x;
+      var countY = y + (countSize/4);
+
+      var titleSize = 22;
+      var titleTop = (canvasH/2)-titleSize/2;
 
       Polymer({
         // define element prototype here
@@ -41,10 +48,14 @@
           y : y,
           stroke_width : strokeWidth
           },
-          text : {
-            x : textX,
-            y : textY,
-            size : textSize + "px"
+          title : {
+            top : titleTop + "px",
+            size : titleSize + "px"
+          },
+          count : {
+            x : countX,
+            y : countY,
+            size : countSize + "px"
           }
       });
 
