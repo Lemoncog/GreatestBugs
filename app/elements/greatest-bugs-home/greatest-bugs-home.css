@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.row05 {
+  width : 48%;
+  margin : auto;
+  padding : 8px;
+}

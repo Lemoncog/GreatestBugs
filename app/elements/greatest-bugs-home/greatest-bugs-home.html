@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="greatest-bugs-home" attributes="">
+  <template>
+    <link rel="stylesheet" href="greatest-bugs-home.css">
+    <div div horizontal layout wrap style="width: 100%">
+      <template repeat="{{badges}}">
+        <div class="row05"><badge-score></badge-score></div>
+      </template>
+    </div>
+  </template>
+  <script>
+    (function () {
+
+      function get(name){
+         if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+            return decodeURIComponent(name[1]);
+      }
+
+     console.log("location = " + location.search);
+
+     badges = [];
+
+     count = get('size');
+
+     for(var i = 0 ; i < count; i++) {
+        badges.push("i");
+     }
+ 
+      Polymer({
+        // define element prototype here
+        badges : badges
+      });
+
+    })();
+  </script>
+</polymer-element>
