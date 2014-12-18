@@ -3,19 +3,14 @@
 <polymer-element name="badge-score" attributes="badge">
   <template>
   <link rel="stylesheet" href="badge-score.css">
-  <div>
-    <b style="
-      position : relative;
-      top : {{title.top}};
-      font-size : {{title.size}};">
-     {{badge.title}}
-    </b>
+  <div horizontal layout center>
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
       <text x="{{count.x}}" y="{{count.y}}" font-size="{{count.size}}";>
       {{badge.bugCount}}
       </text>
     </svg>
+    <b>{{badge.title}}</b>
   </div>
   </template>
   <script>

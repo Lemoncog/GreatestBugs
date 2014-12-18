@@ -2,11 +2,6 @@
   display: block;
 }
 
-svg {
-	float : left;
-	height: auto;
-}
-
 b {
   font-family: "RobotoDraft,sans-serif";
   color: #f44336;
