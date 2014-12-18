@@ -7,28 +7,6 @@ svg {
 	height: auto;
 }
 
-badge-score {
-      line-height: 32px;
-      border-radius: 2px;
-      background-color: #fff;
-      color: #646464;
-      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transition-delay: 0.2s;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-
-/*Clearfix, means floated elements take up height*/
-badge-score:after {
-  content:"";
-  display:table;
-  clear:both;
-}
-
-b {
-	color : #f44336;
-}
-
-
 circle {
 	stroke : #f44336;
 	fill : transparent;

@@ -2,13 +2,14 @@
 
 <polymer-element name="badge-score" attributes="badge">
   <template>
+  <link rel="stylesheet" href="badge-score.css">
   <div>
-    <link rel="stylesheet" href="badge-score.css">
     <b style="
       position : relative;
       top : {{title.top}};
-      font-size : {{title.size}};
-    ">AMAZING BUG REPORT</b>
+      font-size : {{title.size}};">
+     {{badge.title}}
+    </b>
     <svg height="{{canvasH}}" width="{{canvasW}}">
       <circle cx="{{circle.x}}" cy="{{circle.y}}" r="{{circle.radius}}" stroke="black" stroke-width="{{circle.stroke_width}}" fill="white" />
       <text x="{{count.x}}" y="{{count.y}}" font-size="{{count.size}}";>
