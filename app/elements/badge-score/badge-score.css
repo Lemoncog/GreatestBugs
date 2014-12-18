@@ -7,6 +7,11 @@ svg {
 	height: auto;
 }
 
+b {
+  font-family: "RobotoDraft,sans-serif";
+  color: #f44336;
+}
+
 circle {
 	stroke : #f44336;
 	fill : transparent;
@@ -15,4 +20,5 @@ circle {
 text {
 	fill: #f44336;
 	text-anchor: middle;
+  	font-family: "RobotoDraft,sans-serif";
 }
