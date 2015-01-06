@@ -22,6 +22,11 @@
      badges = [];
 
      count = get('size');
+     if(count == undefined) {
+      count = 5;
+     }
+
+     console.log("count = " + count);
 
       function numberToFriendlyText(number) {
         number = Math.round(number);
