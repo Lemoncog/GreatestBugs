@@ -12,6 +12,7 @@ test/bower_components/
 .jshintrc
 .yo-rc.json
 npm-debug.log
+data
 =======
 # Logs
 logs

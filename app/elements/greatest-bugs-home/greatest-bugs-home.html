@@ -12,6 +12,12 @@
   <script>
     (function () {
 
+    console.log("HOME");
+
+    fetchData(function dataLoaded(data) {
+        console.log("Data Loaded");
+    });
+
      function get(name){
          if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
             return decodeURIComponent(name[1]);
